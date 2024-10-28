@@ -1,9 +1,15 @@
 #include "app.h"
+#include <iostream>
 
-// input one integer
-// write its hex representation to std::cout (using vsite::oop::v1::to_hex)
-// write multiplication table up to this number to std::cout (using vsite::oop::v1::mult_table)
+int main() {
+    int num;
 
-int main()
-{
+    std::cout << "Enter an integer: ";
+    std::cin >> num;
+
+    std::cout << "Hexadecimal: " << vsite::oop::v1::to_hex(num) << std::endl;
+
+    vsite::oop::v1::mult_table(num, std::cout);
+
+    return 0;
 }
